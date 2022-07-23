@@ -24,9 +24,9 @@
 * Utilize um ambiente virtual: https://docs.python.org/3/tutorial/venv.html
 * No ambiente virtual, instale as bibliotecas necessárias: `pip install -r requirements.txt`
 
-## ☕ Usando Scrap-Aluguel
+## ☕ Usando Linkedin-jobs-desc
 
-Para usar Scrap-Aluguel, siga estas etapas:
+Para usar Linkedin-jobs-desc, siga estas etapas:
 
 na raiz do repositórico, rode:
 
