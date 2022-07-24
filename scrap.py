@@ -87,6 +87,7 @@ class Scrap():
             self.driver.get(url)
             time.sleep(1)
         self.jobs[url] = self.get_job_info()
+        self.save_jobs_file()
 
     def get_job_info(self) -> Job:
         job = Job()
