@@ -34,6 +34,18 @@ na raiz do repositórico, rode:
 python main.py
 ```
 
+Todos os dados serão salvos em **data/jobs.pkl** no qual você pode ler com a biblioteca `pickle`. O arquivo conterá um `dict` no qual a chave será a URL de acesso para a vaga e o valor será um objeto `Job` no qual terá os seguintes atributos:
+* description: Descrição da vaga, sem nenhum tratamento
+* company_url: URL da empresa
+* company_name: Nome da empresa
+* time_post: Tempo no qual a vaga está aberta
+* job_title: Titulo da vaga
+* experience_level: Nível de experiência
+* type_job: Tipo de emprego: Presencial, remoto ou híbrido
+* function: Função que será desempenhada
+* sector: Setor
+* code: Código, se inativo
+* datetime: Data do cadastro
 
 ## 📝 Licença
 
