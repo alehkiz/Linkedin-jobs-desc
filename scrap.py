@@ -24,7 +24,7 @@ class Scrap():
         self.driver = Scrap.load_driver()
         self.jobs = self.load_jobs_file()
         self.console = Console()
-    def load(self, keywords = "Ciência de Dados", location = "Sao Paulo, SP"):
+    def load(self, keywords = "Ciência de Dados", location = "Sao Paulo, SP", limit=500):
         """Recupera os links de vagas de acordo com `keywords` e `location`
 
         Raises:
@@ -64,6 +64,10 @@ class Scrap():
                 self.driver.execute_script("window.scrollTo(0, "+str(0)+")")
                 time.sleep(2)
                 self.driver.execute_script("window.scrollTo(0, "+str(new_height)+")")
+            jobs_results = self.driver.find_element(By.CLASS_NAME, 'jobs-search__results-list')
+            jobs_li = jobs_results.find_elements(By.TAG_NAME, 'li')
+            if len(jobs_li) >= limit:
+                break
             time.sleep(1)
         jobs_results = self.driver.find_element(By.CLASS_NAME, 'jobs-search__results-list')
         jobs_li = jobs_results.find_elements(By.TAG_NAME, 'li')
